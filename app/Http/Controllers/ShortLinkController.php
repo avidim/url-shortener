@@ -17,7 +17,7 @@ class ShortLinkController extends Controller
         if ($validator->fails()) {
             return response()->json([
                 'status' => 'error',
-                'errors' => $validator->errors()->toArray()
+                'errors' => $validator->errors()
             ], 200);
         }
 
