@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('form');
-});
+Route::get('/', function () { return view('form'); });
+Route::post('short', [ ShortLinkController::class, 'short' ]);
+Route::get('{shortLink}', [ ShortLinkController::class, 'goTo' ]);
